@@ -1,0 +1,9 @@
+# Local secret scanning, run on `git commit`.
+# Setup once per clone:
+#   pipx install pre-commit   (or: uv tool install pre-commit)
+#   pre-commit install
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
