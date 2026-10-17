@@ -1,0 +1,14 @@
+// Niri config — modular entrypoint. See includes/ for the real settings.
+// This config is in the KDL format: https://kdl.dev
+// Wiki: https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
+//
+// Rollback: `git log --oneline` → `git show <sha>:config.kdl`
+// Validate: `niri validate`
+
+include "includes/general.kdl"
+include "includes/input.kdl"
+include "includes/outputs.kdl"
+include "includes/layout.kdl"
+include "includes/window-rules.kdl"
+include "includes/binds.kdl"
+include "includes/startup.kdl"

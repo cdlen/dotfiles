@@ -1,0 +1,31 @@
+// General niri behaviour: notifications, gestures, cursor, overlays, screenshots, debug.
+// No shell-specific code here — safe to keep across shell changes.
+
+config-notification {
+    disable-failed
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 28
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+    render-drm-device "/dev/dri/by-path/pci-0000:01:00.0-render"
+    wait-for-frame-completion-before-queueing
+}

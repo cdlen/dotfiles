@@ -1,0 +1,11 @@
+// Environment variables and autostart.
+// Running niri as a session also supports xdg-desktop-autostart.
+environment {
+    QT_QPA_PLATFORMTHEME "kde"
+    XDG_CURRENT_DESKTOP "niri"
+    XCURSOR_THEME "Bibata-Modern-Classic"
+    XCURSOR_SIZE "28"
+}
+
+spawn-at-startup "noctalia"
+spawn-sh-at-startup "QT_STYLE_OVERRIDE=Fusion QT_QUICK_CONTROLS_STYLE=org.kde.desktop /usr/lib/polkit-kde-authentication-agent-1"
