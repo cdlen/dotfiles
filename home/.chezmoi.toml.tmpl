@@ -1,0 +1,16 @@
+{{/* Portable layer (starship, ...) is always deployed; GUI layer (niri, foot)
+     only when isGui. Decided once at init and stored in the local config so it
+     does NOT flip when applying over SSH, where DISPLAY/WAYLAND_DISPLAY are
+     unset and a naive re-detection would delete the GUI configs. */}}
+{{- $session := env "XDG_SESSION_TYPE" -}}
+{{- $detected := false -}}
+{{- if or (env "WAYLAND_DISPLAY") (env "DISPLAY") (eq $session "wayland") (eq $session "x11") -}}
+{{-   $detected = true -}}
+{{- end -}}
+{{- $isGui := $detected -}}
+{{- if or (hasKey . "isGui") stdinIsATTY -}}
+{{-   $isGui = promptBoolOnce . "isGui" "Does this machine have a graphical desktop? (deploys niri, foot)" $detected -}}
+{{- end -}}
+
+[data]
+    isGui = {{ $isGui }}

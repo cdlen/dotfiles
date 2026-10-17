@@ -1,0 +1,6 @@
+{{/* GUI layer: only deployed on graphical machines. The portable layer
+     (starship, ...) is always deployed. */}}
+{{- if not (get . "isGui") }}
+.config/foot
+.config/niri
+{{- end }}
