@@ -5,7 +5,7 @@ My personal config, managed with [chezmoi](https://chezmoi.io).
 ## Setup on a new machine
 
 ```sh
-chezmoi init --apply niranjan279
+chezmoi init --apply cdlen
 ```
 
 ## Usage
