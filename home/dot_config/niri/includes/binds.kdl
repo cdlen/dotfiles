@@ -45,6 +45,9 @@ binds {
     Mod+grave { spawn "noctalia" "msg" "plugin" "alexander/screen-toolkit:service" "all" "ocr"; }
     Mod+G { spawn "noctalia" "msg" "plugin" "alexander/screen-toolkit:service" "all" "ocr"; }
 
+    // Toggle translucency of the focused window (uses its window-rule opacity)
+    Mod+Shift+O hotkey-overlay-title="Toggle Window Opacity" { toggle-window-rule-opacity; }
+
     // --- Workspaces ---
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }

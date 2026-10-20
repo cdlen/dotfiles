@@ -10,6 +10,13 @@ layer-rule {
 window-rule {
     match app-id="firefox$"
     open-maximized true
+    // Mod+Shift+O toggles between this and fully opaque.
+    opacity 0.95
+    draw-border-with-background false
+    background-effect {
+        blur true
+        noise 0.02
+    }
 }
 window-rule {
     geometry-corner-radius 8
