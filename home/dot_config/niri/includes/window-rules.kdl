@@ -19,18 +19,18 @@ window-rule {
     }
 }
 window-rule {
-    geometry-corner-radius 8
-    clip-to-geometry true
+    // geometry-corner-radius 8
+    // clip-to-geometry true
 }
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
 }
 window-rule {
-    match app-id=r#"^org\.gnome\."#
-    draw-border-with-background false
-    geometry-corner-radius 12
-    clip-to-geometry true
+    // match app-id=r#"^org\.gnome\."#
+    // draw-border-with-background false
+    // geometry-corner-radius 12
+    // clip-to-geometry true
 }
 window-rule {
     match app-id=r#"^gnome-control-center$"#
