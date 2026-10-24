@@ -27,6 +27,12 @@ window-rule {
     default-column-width {}
 }
 window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    open-floating true
+    default-column-width { fixed 900; }
+    default-window-height { fixed 600; }
+}
+window-rule {
     // match app-id=r#"^org\.gnome\."#
     // draw-border-with-background false
     // geometry-corner-radius 12
