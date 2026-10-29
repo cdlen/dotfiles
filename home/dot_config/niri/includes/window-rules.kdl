@@ -11,12 +11,20 @@ window-rule {
     match app-id="firefox$"
     open-maximized true
     // Mod+Shift+O toggles between this and fully opaque.
-    opacity 0.95
+    opacity 0.93
     draw-border-with-background false
     background-effect {
         blur true
         noise 0.02
     }
+}
+window-rule {
+  match app-id="foot"
+  draw-border-with-background false
+  background-effect {
+    blur true
+    noise 0.02
+  }
 }
 window-rule {
     // geometry-corner-radius 8
@@ -65,7 +73,6 @@ window-rule {
     match app-id="zen"
     match app-id="com.mitchellh.ghostty"
     match app-id="kitty"
-    match app-id="foot"
     draw-border-with-background false
 }
 window-rule {
