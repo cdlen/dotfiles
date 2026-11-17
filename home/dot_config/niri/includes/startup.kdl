@@ -9,3 +9,4 @@ environment {
 
 spawn-at-startup "noctalia"
 spawn-sh-at-startup "QT_STYLE_OVERRIDE=Fusion QT_QUICK_CONTROLS_STYLE=org.kde.desktop /usr/lib/polkit-kde-authentication-agent-1"
+spawn-at-startup "netbird-ui"
